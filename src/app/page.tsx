@@ -1,5 +1,12 @@
-const Page = () => {
-  return <div className="text-red-500">Hello World!</div>;
+import prisma from "@/lib/db";
+
+const Page = async () => {
+  const users = await prisma.user.findMany();
+  return (
+    <div className="flex justify-center items-center min-h-screen">
+      {JSON.stringify(users)}
+    </div>
+  );
 };
 
 export default Page;
