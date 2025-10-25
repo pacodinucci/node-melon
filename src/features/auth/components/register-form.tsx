@@ -82,13 +82,19 @@ export function RegisterForm() {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)}>
               <div className="grid gap-6">
-                <div className="flec flex-col gap-4">
+                <div className="flex flex-col gap-4">
                   <Button
                     variant={"outline"}
                     className="w-full"
                     type="button"
                     disabled={isPending}
                   >
+                    <Image
+                      alt="Github"
+                      src={"/logos/github.svg"}
+                      width={20}
+                      height={20}
+                    />
                     Continue with Github
                   </Button>
                   <Button
@@ -97,6 +103,12 @@ export function RegisterForm() {
                     type="button"
                     disabled={isPending}
                   >
+                    <Image
+                      alt="Google"
+                      src={"/logos/google.svg"}
+                      width={20}
+                      height={20}
+                    />
                     Continue with Google
                   </Button>
                 </div>
